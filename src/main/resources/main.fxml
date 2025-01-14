@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gviktor.controller.MainController"
+            prefHeight="600.0" prefWidth="600.0">
+    <top>
+         <VBox>
+
+        <MenuBar>
+            <Menu text="Main">
+                <MenuItem onAction="#handleMenu" text="Triangle"/>
+                <MenuItem onAction="#interpolation" text="Interpolation"/>
+                <MenuItem onAction="#polygonDrawer" text="PolygonDrawer"/>
+                <MenuItem onAction="#imageManipulator" text="ImageManipulator"/>
+
+                <MenuItem text="Exit"/>
+            </Menu>
+        </MenuBar>
+        <ToolBar fx:id="mainToolBar">
+            <Button text="asadaa"></Button>
+        </ToolBar>
+         </VBox>
+    </top>
+<center>
+    <Canvas fx:id="drawingCanvas" height="650" width="650"  onMouseClicked="#handleCanvasClick">
+
+    </Canvas>
+</center>
+</BorderPane>
