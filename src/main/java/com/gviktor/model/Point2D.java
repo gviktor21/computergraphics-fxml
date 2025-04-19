@@ -1,6 +1,12 @@
 package com.gviktor.model;
 
-public class Point2D extends Point{ 
+import java.util.Comparator;
+
+public class Point2D extends Point{
+
+	public static final Comparator<Point> CLOCKWISE_COMPARATOR  =
+			Comparator.comparing(Point::getX)
+			.thenComparing(Comparator.comparing(Point::getY).reversed());
 	public Point2D(float x, float y){
 		this.x = x; this.y = y;
 	}

@@ -83,5 +83,9 @@ public abstract class Polygon {
 		this.vertexes = vertexes;
 	}
 
+	public void clockwiseOrder(){
+		vertexes.sort(Point2D.CLOCKWISE_COMPARATOR);
+	}
+
 	public abstract void updateVertexes();
 }
